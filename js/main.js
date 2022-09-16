@@ -1,6 +1,6 @@
 const getRandomInteger = (min, max) => {
   if (min < 0 || max < 0) {
-    return 'Используйте только положительные числа';
+    return -1;
   }
   else {
     const rand = Math.ceil(min) + Math.floor(Math.random() * (Math.floor(max) + 1 - Math.ceil(min)));
