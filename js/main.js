@@ -1,4 +1,4 @@
-const randomInteger = (min, max) => {
+const getRandomInteger = (min, max) => {
   if (min < 0 || max < 0) {
     return 'Используйте только положительные числа';
   }
@@ -7,5 +7,14 @@ const randomInteger = (min, max) => {
     return rand;
   }
 };
-randomInteger(-0.35, 2.38);
+getRandomInteger(-0.35, 2.38);
 
+const getLineLength = (line, maxLength) => {
+  if (line.length >= maxLength) {
+    return false;
+  }
+  else {
+    return true;
+  }
+};
+getLineLength('у э', 5);
