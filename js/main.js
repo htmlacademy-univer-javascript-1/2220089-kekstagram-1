@@ -1,5 +1,5 @@
 const getRandomInteger = (min, max) => {
-  if (min < 0 || max < 0) {
+  if (min < 0 || max < 0 || max <= min) {
     return -1;
   }
   else {
