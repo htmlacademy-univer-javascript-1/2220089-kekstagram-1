@@ -3,20 +3,9 @@ const getRandomInteger = (min, max) => {
     return -1;
   }
   if (max < min){
-    const rand = Math.ceil(max) + Math.floor(Math.random() * (Math.floor(min) + 1 - Math.ceil(max)));
-    return rand;
+    [max, min] = [min, max];
   }
-  else {
-    const rand = Math.ceil(min) + Math.floor(Math.random() * (Math.floor(max) + 1 - Math.ceil(min)));
-    return rand;
-  }
+  return Math.ceil(min) + Math.floor(Math.random() * (Math.floor(max) + 1 - Math.ceil(min)));
 };
 
-const getLineLength = (line, maxLength) => {
-  if (line.length >= maxLength) {
-    return false;
-  }
-  else {
-    return true;
-  }
-};
+const getLineLength = (line, maxLength) => line.length <= maxLength;
