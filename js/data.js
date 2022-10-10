@@ -1,4 +1,4 @@
-import {getRandomInteger} from './utils.js';
+import {getRandomInteger} from './util.js';
 
 const COUNT_OF_OBJECTS = 25;
 
