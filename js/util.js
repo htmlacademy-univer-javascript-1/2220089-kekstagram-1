@@ -10,4 +10,13 @@ const getRandomInteger = (min, max) => {
 
 const getLineLength = (line, maxLength) => line.length <= maxLength;
 
-export{getRandomInteger, getLineLength};
+const getRandomElementFromArray = (array) => array[getRandomInteger(0, array.length - 1)];
+
+const isEscapeKey = (event) => event.key === 'Escape';
+
+const uniqueNumberGenerator = () => {
+  let prevNumber = 0;
+  return () => ++prevNumber;
+};
+
+export {getRandomInteger, getRandomElementFromArray, getLineLength, uniqueNumberGenerator, isEscapeKey};
