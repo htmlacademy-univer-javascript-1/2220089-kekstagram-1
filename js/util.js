@@ -14,9 +14,4 @@ const getRandomElementFromArray = (array) => array[getRandomInteger(0, array.len
 
 const isEscapeKey = (event) => event.key === 'Escape';
 
-const uniqueNumberGenerator = () => {
-  let prevNumber = 0;
-  return () => ++prevNumber;
-};
-
-export {getRandomInteger, getRandomElementFromArray, getLineLength, uniqueNumberGenerator, isEscapeKey};
+export {getRandomInteger, getRandomElementFromArray, getLineLength, isEscapeKey};
