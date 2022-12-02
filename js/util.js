@@ -10,8 +10,6 @@ const getRandomInteger = (min, max) => {
 
 const getLineLength = (line, maxLength) => line.length <= maxLength;
 
-const getRandomElementFromArray = (array) => array[getRandomInteger(0, array.length - 1)];
-
 const isEscapeKey = (event) => event.key === 'Escape';
 
-export {getRandomInteger, getRandomElementFromArray, getLineLength, isEscapeKey};
+export {getRandomInteger, getLineLength, isEscapeKey};
