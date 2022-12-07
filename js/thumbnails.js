@@ -19,3 +19,4 @@ const createThumbnails = (data) => {
 };
 
 export {createThumbnails};
+
