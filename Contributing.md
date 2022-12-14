@@ -12,7 +12,7 @@
 
 ```
 # В вашей локальной копии переключитесь в ветку master
-c master
+git checkout master
 
 # Заберите изменения из репозитория Академии¹
 git pull academy master
