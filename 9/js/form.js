@@ -15,9 +15,11 @@ const pristine = new Pristine(imgUploadForm, {
   errorTextClass: 'img-upload__error-text'
 });
 
+const getHashtags = (value) => value.toLowerCase().trim().split(/\s+/);
+
 pristine.addValidator(textHashtags, (value) => {
   if (value !== '') {
-    const hashTagsArray = value.toLowerCase().split(' ');
+    const hashTagsArray = getHashtags(value);
     const hashTagsSet = new Set(hashTagsArray);
 
     if (hashTagsSet.size !== hashTagsArray.length) {
@@ -29,7 +31,7 @@ pristine.addValidator(textHashtags, (value) => {
 
 pristine.addValidator(textHashtags, (value) => {
   if (value !== '') {
-    const hashTagsArray = value.toLowerCase().split(' ');
+    const hashTagsArray = getHashtags(value);
 
     if (hashTagsArray.length > MAX_TAGS_NUMBER) {
       return false;
@@ -43,7 +45,7 @@ pristine.addValidator(textHashtags, (value) => {
     return true;
   }
 
-  const hashTagsArray = value.toLowerCase().split(' ');
+  const hashTagsArray = getHashtags(value);
   return hashTagsArray.every((hashtag) => TAG_REGEX.test(hashtag));
 }, 'Один из введённых вами хештегов некорректен');
 
