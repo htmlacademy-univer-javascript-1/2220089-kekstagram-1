@@ -53,13 +53,13 @@ const showCommentsCount = (image, commentsNumber) => {
   socialCommentCount.innerHTML = `${commentsNumber > commentsCount.textContent ? commentsCount.textContent : commentsNumber} из `;
   socialCommentCount.append(commentsCount);
   socialCommentCount.innerHTML += ' комментариев';
-  if (commentsNumber > commentsCount.textContent) {
+  if (commentsNumber >= commentsCount.textContent) {
     commentsLoader.classList.add('hidden');
   }
 };
 
 const openModal = (image) => {
-  let commentsNumber = 0;
+  let commentsNumber = MAX_COMMENT_NUMBER;
   bigPictureImg.src = image.url;
   bigPictureImg.alt = image.description;
   likesCount.textContent = image.likes;
