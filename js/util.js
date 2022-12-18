@@ -42,10 +42,11 @@ const shuffleArray = (array) => {
   while (currentIndex !== 0) {
     randomIndex = Math.floor(Math.random() * currentIndex);
     currentIndex--;
-
     [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
   }
-
+  for(let i = 0; i < 15; i++){
+    array.pop();
+  }
   return array;
 };
 
