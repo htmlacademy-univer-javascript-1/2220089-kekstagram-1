@@ -7,7 +7,6 @@ import './big-pictures.js';
 import {showError, showSuccess} from './alerts.js';
 import {setFilter, showFilters, TIMEOUT_DELAY} from './filters.js';
 
-// createThumbnails(createImages());
 getData((data) => {
   createThumbnails(data);
   showFilters();
@@ -22,5 +21,3 @@ setUserFormSubmit(() => {
   closeUploadFileForm(null, false);
   showError();
 });
-// showSuccess();
-// createThumbnails();
