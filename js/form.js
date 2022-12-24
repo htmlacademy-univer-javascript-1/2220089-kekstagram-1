@@ -91,13 +91,9 @@ const setUserFormSubmit = (onSuccess, onError) => {
         () => {
           onSuccess();
           unblockSubmitButton();
-
-          // scaleUploadImage.init();
-          // applyChanges('none');
         },
         () => {
           onError();
-          // showAlert('Не удалось отправить форму. Попробуйте ещё раз');
           unblockSubmitButton();
         },
         new FormData(imgUploadForm)
